@@ -25,7 +25,16 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+
+    //protected $redirectTo = '/home';
+
+    protected function authenticated($request, $user)
+    {
+        if($user->id == 3) {
+            return redirect()->intended('pesan-tiket');
+        }
+        return redirect()->intended('unggah-pembayaran');
+    }
 
     /**
      * Create a new controller instance.
