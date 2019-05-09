@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('pesan-tiket', 'PesanTiketController@index');
 Route::post('/pesan-tiket/tambah','PesanTiketController@tambah');
+Route::get('unggah-pembayaran','UnggahPembayaranController@index');
+Route::post('/unggah-pembayaran/unggah','UnggahPembayaranController@unggahBuktiPembayaran');
 
 Auth::routes([
     

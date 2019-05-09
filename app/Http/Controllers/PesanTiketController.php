@@ -41,7 +41,8 @@ class PesanTiketController extends Controller
 
             $status_kode = DB::table('tiket')
                 ->select('kode')
-                ->where('kode', '=', $kode);
+                ->where('kode', '=', $kode)
+                ->count();
             
         } while(($status_kode_pembayaran > 0) && ($status_kode > 0));
 
