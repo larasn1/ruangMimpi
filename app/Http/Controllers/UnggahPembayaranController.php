@@ -37,6 +37,7 @@ class UnggahPembayaranController extends Controller
             $uploadedFile = $request->file('bukti_pembayaran');
 
             $path = $uploadedFile->store('public/images');
+            $path = str_replace('public/','',$path);
 
             $destinationPath = public_path('/images');
             $uploadedFile->move($destinationPath, $path);

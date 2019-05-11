@@ -19,6 +19,8 @@ Route::get('pesan-tiket', 'PesanTiketController@index');
 Route::post('/pesan-tiket/tambah','PesanTiketController@tambah');
 Route::get('unggah-pembayaran','UnggahPembayaranController@index');
 Route::post('/unggah-pembayaran/unggah','UnggahPembayaranController@unggahBuktiPembayaran');
+Route::get('verifikasi-pembayaran','VerifikasiPembayaranController@index');
+Route::get('/verifikasi-pembayaran/gantiStatus/{kode}','VerifikasiPembayaranController@gantiStatus');
 
 Auth::routes([
     
